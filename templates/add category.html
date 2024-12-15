@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div  style="margin-bottom:100px">
+
+<h2 class="text-center text-light mt-5"> Add Categories Here....</h2>
+<form method="POST" enctype="multipart/form-data">
+
+{% csrf_token %}
+<div class="text-light container-fluid mt-5">
+<div class="mb-5 mx-auto " style="width:20%">
+  <label  class="form-label">Name:</label>
+  <input type="text" class="form-control" name="n" placeholder="Enter the Name">
+</div>
+    <div class="mb-3 mx-auto" style="width:20%">
+  <label  class="form-label">Description</label>
+  <input type="text" class="form-control" name="d" placeholder="Enter the description">
+</div>
+  <div class="mb-3  text-center">
+  <input type="submit" value="submit">
+</div>
+</div>
+</form>
+</div>
+{% endblock %}
